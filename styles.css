@@ -1,0 +1,121 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Kumbh Sans', sans-serif;
+    font-size: 16px;
+    background-color: var(--Darkcyan);
+    background-image: url(./images/bg-pattern-top.svg), url(./images/bg-pattern-bottom.svg);
+    background-repeat: no-repeat, no-repeat;
+    background-position: right 51vw bottom 20vh, left 45vw top 50vh
+}
+
+:root{
+    --Darkcyan: hsl(185, 75%, 39%);
+    --Verydarkdesaturatedblue: hsl(229, 23%, 23%);
+    --Darkgrayishblue: hsl(227, 10%, 46%);
+}
+
+.container{
+    width: 20.3125em;
+    height: 23.4375em;
+    margin: 10.625em auto;
+    border-radius: .9em;
+    overflow: hidden;
+    animation: scaledown 1000ms;
+}
+
+.container .bubbles{
+    width: 100%;
+    height: 8.75em;
+    background: url(./images/bg-pattern-card.svg);
+}
+
+.container .card__img{
+    position: relative;
+    width: 100%;
+}
+
+.container .card__img img{
+    border-radius: 50%;
+    border: 0.25em solid white;
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    margin: auto; 
+}
+
+.container .iformation{
+    
+    width: 100%;
+    height: 10.3125em;
+    padding: 4.375em 6.25em;
+    text-align: center;
+    background-color: white;
+}
+
+.iformation .name{
+    font-weight: 700;
+}
+
+.iformation .age{
+    color: var(--Darkgrayishblue);
+}
+
+.iformation .city {
+    color: var(--Darkgrayishblue);
+    margin-top: 0.625em;
+}
+
+.stats{
+    background-color: white;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: space-evenly;
+    padding: 10px 0 25px 0;
+    text-align: center;
+}
+
+.stats .stats__item-amount {
+    font-weight: 700;
+}
+
+.stats .stats__item-unit{
+    font-weight: 400;
+    font-size: 0.7em;
+    color: var(--Darkgrayishblue);
+}
+
+
+/*FOOTER*/
+
+
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+@media only screen and (min-width: 1000px){
+    .container{
+        width: 21,875em;
+        
+    }
+}
+
+@keyframes scaledown {
+    0%{
+        transform: scale(1.5);
+    }
+    100%{
+        transform: scale(1);
+    }
+}
